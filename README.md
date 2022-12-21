@@ -1,0 +1,1 @@
+# simul-caisse-magaz
