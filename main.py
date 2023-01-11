@@ -6,15 +6,28 @@ from tkinter import *
 from tkinter import ttk
 import model
 
-root = Tk()
-root.title('Simulateur de caisses')
-root.geometry('900x600')
-root.resizable(False, False)
+circle_x = 10
+circle_y = 10
+ 
 
-frm = ttk.Frame(root, padding=10)
-frm.grid()
+def move_circle(circle):
+    canvas.move(circle, 1, 1)
+    canvas.after(100, move_circle(circle))   
 
-ttk.Label(frm, text="Hello World!").grid(column=5, row=0)
-ttk.Button(frm, text="Quit", command=root.destroy).grid(column=1, row=0)
+def main():
 
-root.mainloop()
+    global circle_x, circle_y
+    SCREEN_WIDTH = 1000
+    SCREEN_HEIGHT = 500
+
+    root = Tk()
+    root.title('canvasulateur de caisses')
+    root.geometry(f'{SCREEN_WIDTH}x{SCREEN_HEIGHT}')
+    root.resizable(False, False)
+
+    sim = model.MarketSim(root)
+
+    root.mainloop()
+
+if __name__ == "__main__":
+    main()

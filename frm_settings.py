@@ -1,4 +1,4 @@
-# Script      : sim_settings.py
+# Script      : frm_settings.py
 # Description : Simulation settings window
 # Author      : DOMINGUES PEDROSA Samuel
 # Date        : 2022.12.21, V1.0
