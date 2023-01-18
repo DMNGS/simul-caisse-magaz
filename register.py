@@ -8,5 +8,6 @@ MAX_CLIENTS = 5
 
 class Register:
     def __init__(self, line_size, wait_time):
+        self.open = False
         self.line = Queue(line_size)
         self.wait_time = wait_time
