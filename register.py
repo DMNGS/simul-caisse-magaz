@@ -7,5 +7,9 @@ from queue import Queue
 class Register:
     def __init__(self, line_size):
         self.open = False
-        self.line = Queue(line_size)
+        self.line = []
+        self.line_size = line_size
         self.pay_time = 0
+
+    def full(self):
+        return True if len(self.line) >= self.line_size else False
